@@ -184,6 +184,7 @@ Partial Class Form1
         AcceptButton = btnTambah
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.Sienna
         ClientSize = New Size(1019, 450)
         Controls.Add(btnLogout)
         Controls.Add(BtnHapus)
