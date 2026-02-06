@@ -36,7 +36,7 @@ Partial Class Form2
         txtUser.BackColor = Color.Silver
         txtUser.BorderStyle = BorderStyle.None
         txtUser.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtUser.Location = New Point(260, 173)
+        txtUser.Location = New Point(177, 175)
         txtUser.Name = "txtUser"
         txtUser.Size = New Size(380, 22)
         txtUser.TabIndex = 0
@@ -46,8 +46,9 @@ Partial Class Form2
         txtPassword.BackColor = Color.Silver
         txtPassword.BorderStyle = BorderStyle.None
         txtPassword.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtPassword.Location = New Point(260, 210)
+        txtPassword.Location = New Point(177, 212)
         txtPassword.Name = "txtPassword"
+        txtPassword.PasswordChar = "*"c
         txtPassword.Size = New Size(379, 22)
         txtPassword.TabIndex = 1
         ' 
@@ -56,7 +57,7 @@ Partial Class Form2
         lblUser.AutoSize = True
         lblUser.BackColor = Color.White
         lblUser.Font = New Font("Yu Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblUser.Location = New Point(136, 173)
+        lblUser.Location = New Point(53, 175)
         lblUser.Name = "lblUser"
         lblUser.Size = New Size(118, 21)
         lblUser.TabIndex = 2
@@ -66,7 +67,7 @@ Partial Class Form2
         ' 
         lblPassword.AutoSize = True
         lblPassword.Font = New Font("Yu Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblPassword.Location = New Point(141, 214)
+        lblPassword.Location = New Point(58, 216)
         lblPassword.Name = "lblPassword"
         lblPassword.Size = New Size(113, 21)
         lblPassword.TabIndex = 3
@@ -77,7 +78,7 @@ Partial Class Form2
         Label1.AutoSize = True
         Label1.BackColor = Color.Coral
         Label1.Font = New Font("Yu Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(124, 82)
+        Label1.Location = New Point(31, 84)
         Label1.Name = "Label1"
         Label1.Size = New Size(562, 35)
         Label1.TabIndex = 4
@@ -87,7 +88,7 @@ Partial Class Form2
         ' 
         btnlogin.BackColor = SystemColors.ActiveBorder
         btnlogin.Cursor = Cursors.Hand
-        btnlogin.Location = New Point(357, 260)
+        btnlogin.Location = New Point(274, 262)
         btnlogin.Name = "btnlogin"
         btnlogin.Size = New Size(145, 38)
         btnlogin.TabIndex = 5
@@ -100,7 +101,7 @@ Partial Class Form2
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(618, 642)
         Controls.Add(btnlogin)
         Controls.Add(Label1)
         Controls.Add(lblPassword)

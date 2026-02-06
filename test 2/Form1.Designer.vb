@@ -147,6 +147,8 @@ Partial Class Form1
         ' 
         ' btnDownloadSemua
         ' 
+        btnDownloadSemua.Image = CType(resources.GetObject("btnDownloadSemua.Image"), Image)
+        btnDownloadSemua.ImageAlign = ContentAlignment.MiddleLeft
         btnDownloadSemua.Location = New Point(639, 391)
         btnDownloadSemua.Name = "btnDownloadSemua"
         btnDownloadSemua.Size = New Size(368, 47)
@@ -163,9 +165,11 @@ Partial Class Form1
         ' 
         ' BtnHapus
         ' 
-        BtnHapus.Location = New Point(650, 201)
+        BtnHapus.Image = CType(resources.GetObject("BtnHapus.Image"), Image)
+        BtnHapus.ImageAlign = ContentAlignment.MiddleLeft
+        BtnHapus.Location = New Point(639, 256)
         BtnHapus.Name = "BtnHapus"
-        BtnHapus.Size = New Size(232, 119)
+        BtnHapus.Size = New Size(256, 67)
         BtnHapus.TabIndex = 12
         BtnHapus.Text = "Hapus Buku"
         BtnHapus.UseVisualStyleBackColor = True

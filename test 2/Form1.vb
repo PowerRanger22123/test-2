@@ -1,5 +1,4 @@
-﻿Imports System.Formats.Tar
-Imports System.IO
+﻿Imports System.IO
 
 Public Class Form1
 
@@ -151,7 +150,7 @@ Public Class Form1
             ' Tulis ke file TXT
             System.IO.File.WriteAllLines(pathSimpan, barisData)
 
-            ' 4. RESET STATUS (Agar pop-up peringatan di Image 3b1b7f hilang)
+
             isDirty = False
             siapDownload = True
 
@@ -225,7 +224,7 @@ Public Class Form1
             If tanya = DialogResult.No Then
                 e.Cancel = True
             End If
-            Application.Exit()
+
         End If
     End Sub
     Private Sub cmbStatus_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cmbStatus.SelectionChangeCommitted
@@ -237,14 +236,33 @@ Public Class Form1
             For i As Integer = lvBuku.SelectedItems.Count - 1 To 0 Step -1
                 lvBuku.Items.Remove(lvBuku.SelectedItems(i))
             Next
-            ' Jangan panggil fungsi tulis file di sini agar tidak memicu error "Process access"
+
             isDirty = True
             siapDownload = False
         End If
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        If isDirty Then
+            Dim tanya As DialogResult = MessageBox.Show(
+                "Ada perubahan yang belum disimpan. Tetap log out?",
+                "Peringatan",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            )
+
+            ' Jika user pilih 'No', hentikan proses logout dan tetap di form saat ini
+            If tanya = DialogResult.No Then
+                Exit Sub ' Keluar dari sub-routine btnLogout_Click
+            End If
+        End If
+
+        ' Tempatkan kode logout Anda di sini (misalnya: Me.Hide(), FormLogin.Show())
+        MessageBox.Show("Melanjutkan proses logout...")
+        Me.Hide()
         Form2.Show()
-        Me.Close()
+
     End Sub
+
+
 End Class
