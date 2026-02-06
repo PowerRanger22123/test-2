@@ -67,6 +67,7 @@ Partial Class Form1
         ' 
         ' btnTambah
         ' 
+        btnTambah.Cursor = Cursors.Hand
         btnTambah.Font = New Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnTambah.Image = CType(resources.GetObject("btnTambah.Image"), Image)
         btnTambah.ImageAlign = ContentAlignment.MiddleLeft
@@ -79,6 +80,7 @@ Partial Class Form1
         ' 
         ' btnAddFile
         ' 
+        btnAddFile.Cursor = Cursors.Hand
         btnAddFile.Font = New Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnAddFile.Image = CType(resources.GetObject("btnAddFile.Image"), Image)
         btnAddFile.ImageAlign = ContentAlignment.MiddleLeft
@@ -147,6 +149,8 @@ Partial Class Form1
         ' 
         ' btnDownloadSemua
         ' 
+        btnDownloadSemua.Cursor = Cursors.Hand
+        btnDownloadSemua.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnDownloadSemua.Image = CType(resources.GetObject("btnDownloadSemua.Image"), Image)
         btnDownloadSemua.ImageAlign = ContentAlignment.MiddleLeft
         btnDownloadSemua.Location = New Point(639, 391)
@@ -158,18 +162,22 @@ Partial Class Form1
         ' 
         ' TxtFile
         ' 
+        TxtFile.AccessibleRole = AccessibleRole.Document
         TxtFile.Location = New Point(639, 350)
         TxtFile.Name = "TxtFile"
+        TxtFile.ReadOnly = True
         TxtFile.Size = New Size(367, 23)
         TxtFile.TabIndex = 11
         ' 
         ' BtnHapus
         ' 
+        BtnHapus.Cursor = Cursors.Hand
+        BtnHapus.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         BtnHapus.Image = CType(resources.GetObject("BtnHapus.Image"), Image)
         BtnHapus.ImageAlign = ContentAlignment.MiddleLeft
-        BtnHapus.Location = New Point(639, 256)
+        BtnHapus.Location = New Point(639, 268)
         BtnHapus.Name = "BtnHapus"
-        BtnHapus.Size = New Size(256, 67)
+        BtnHapus.Size = New Size(364, 67)
         BtnHapus.TabIndex = 12
         BtnHapus.Text = "Hapus Buku"
         BtnHapus.UseVisualStyleBackColor = True

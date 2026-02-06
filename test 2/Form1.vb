@@ -87,14 +87,14 @@ Public Class Form1
                 ' Menampilkan path lengkap di textbox agar user tahu lokasinya
                 TxtFile.Text = ofd.FileName
 
-                ' Logika deteksi data lama (seperti permintaan sebelumnya)
+
                 If Path.GetExtension(ofd.FileName).ToLower() = ".txt" Then
                     Dim tanya As DialogResult = MessageBox.Show("Buka sebagai data lama?", "Konfirmasi", MessageBoxButtons.YesNo)
                     If tanya = DialogResult.Yes Then
                         fileBuku = ofd.FileName
                         isNewFile = False
                         BacaDataBuku()
-                        ' Path tetap ada di txtFile jika user ingin menggunakannya lagi
+                        ' Path tetap ada di txtFile jika ingin menggunakannya lagi
                     End If
                 End If
             End If
@@ -206,7 +206,7 @@ Public Class Form1
         cmbStatus.Items.Add("Dipinjam")
         cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList
 
-        ' 🔥 RESET FILE DATA (INI YANG KURANG)
+
         If File.Exists(fileBuku) Then
             File.WriteAllText(fileBuku, "")
         End If
@@ -253,13 +253,13 @@ Public Class Form1
 
             ' Jika user pilih 'No', hentikan proses logout dan tetap di form saat ini
             If tanya = DialogResult.No Then
-                Exit Sub ' Keluar dari sub-routine btnLogout_Click
+                Exit Sub
             End If
         End If
 
-        ' Tempatkan kode logout Anda di sini (misalnya: Me.Hide(), FormLogin.Show())
+
         MessageBox.Show("Melanjutkan proses logout...")
-        Me.Hide()
+        Me.Close()
         Form2.Show()
 
     End Sub
